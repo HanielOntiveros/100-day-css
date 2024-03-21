@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    color:white
+
+}
+
+.frame{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 10px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #43389F;
+    background: linear-gradient(to top right, #43389f 0%, #4ec6ca 100%);
+    color: #333;
+      font-family: 'Open Sans', Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+    
+}
+
+.cien{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 60px;
+}
+
+.one{
+    height: 120px;
+    width: 33px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    left: 6%;
+    z-index: 2;
+    filter: drop-shadow(1px 1px 9px #0000002f);
+}
+.detalle{
+    height: 60px;
+    width: 33px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    rotate: 45deg;
+    top: -28px;
+    right: 38px;
+    z-index: 1;
+    filter: drop-shadow(1px 1px 9px #0000002f);
+}
+
+.cero_uno{
+    height: 120px;
+    width: 120px;
+    border: 28px solid #ffff;
+    border-radius: 50%;
+    right: 25px;
+    position: relative;
+    filter: drop-shadow(1px 1px 9px #0000002f);
+    z-index: 1;
+    
+}
+.cero_dos{
+    height: 120px;
+    width: 120px;
+    border: 28px solid #ffff;
+    border-radius: 50%;
+    right:45px;
+    position: relative;
+    filter: drop-shadow(1px 1px 9px #0000002f);
+    z-index: 0;
+    
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.title{
+    line-height: 75px;
+    font-size: 85px;
+}
+.text{
+    line-height: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
