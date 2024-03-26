@@ -34,9 +34,14 @@
     position: relative;
     background-color: #7DDFFC;
     overflow: hidden;
-    /* animation: delay 3.5s linear infinite; */
+    animation: delay 3.5s linear infinite;
   }
   
+  .container:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 @keyframes delay{
     0%{
         opacity: 0;
@@ -57,15 +62,17 @@
     width: 200px;
     background-color: #F0DE75;
     position: absolute;
-    top: 130px;
+    top: 125px;
+    display: flex;
+    justify-content: center;
   }
 
 .sun-container{
-    height: 300px;
-    width: 180px;
+    height: 200px;
+    width: 220px;
     position: relative;
-    top: 50px;
-    /* background-color: red; */
+    top: 45px;
+/* background-color: red; */
     transform: rotate(0);
     animation: rotation 3.5s linear infinite;
 }
@@ -81,14 +88,78 @@
     0%{
         transform: rotateZ(0deg)
     }
-    30%{
-        transform: rotateZ(20deg)
+    15%{
+        transform: rotateZ(15deg)
     }
     50%{
-        transform: rotateZ(20deg)
+        transform: rotateZ(15deg)
     }
     100%{
-        transform: rotateZ(80deg)
+        transform: rotateZ(90deg)
 
     }
 }
+
+.shadow{
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    z-index: 3;
+}
+
+.piramid{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+
+}
+
+.piramid1{
+    height: 50px;
+    width: 100px;
+    background-color: white;
+    clip-path: polygon(0% 100%, 100% 100% ,50% 0%);
+    animation-name: shadowPiramid1;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+}
+
+@keyframes shadowPiramid1 {
+   from {
+    background-color
+    : white;}
+      to {
+    background-color
+    : grey;}
+    
+}
+
+.piramid2{
+    position: absolute;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: grey;
+    clip-path: polygon(30% 100%, 100% 100%,0% 0% );
+    z-index: 3;
+    animation: shadowPiramid2 3.5s cubic-bezier(0.4, 0, 0.49, 1) infinite reverse;
+}
+
+@keyframes shadowPiramid2 {
+    0% {
+        background: #272C34;
+    }
+    
+    10% {
+        background: #F4F4F4;
+    }
+    70% {
+        background: #DDDADA;
+    }
+    100% {
+        background: #272C34;
+    }
+ }
